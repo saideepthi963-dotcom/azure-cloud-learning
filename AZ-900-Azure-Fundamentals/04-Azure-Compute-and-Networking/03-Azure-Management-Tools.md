@@ -86,3 +86,37 @@ For example, if a VM is underutilized, Advisor might recommend resizing it to sa
 | Get cost, security, performance, or reliability recommendations | **Azure Advisor** |
 
 **Main takeaway:** Azure offers graphical, command-line, mobile, and programming interfaces for managing resources, while Azure Advisor helps you improve your environment.
+
+## 7. Azure Arc
+
+**Azure Arc** allows you to manage resources outside Azure using Azure's management tools.
+
+Imagine a company has servers in three different places:
+
+- **On-premises:** Servers in its own datacenter.
+- **Azure Cloud:** Resources running in Azure.
+- **AWS:** Resources running in another cloud provider.
+
+Instead of managing everything separately, **Azure Arc connects supported resources to Azure so they can be managed from one place.**
+
+### What Can Azure Arc Do?
+
+**Unified Management:** Manage supported resources across on-premises, Azure, other clouds, and edge locations.
+
+**Consistent Governance:** Apply Azure policies, security controls, and compliance rules across connected environments.
+
+**Azure Services Anywhere:** Extend supported Azure capabilities and services to infrastructure outside Azure.
+
+**Hybrid and Multi-Cloud Support:** Helps organizations manage resources across different computing environments.
+
+### ⭐ AZ-900 Exam Tip
+
+**Azure Arc → Manage resources outside Azure using Azure management tools.**
+
+Remember:
+
+**Azure Portal → Manage Azure resources through a browser.**
+
+**Azure Advisor → Get recommendations to improve Azure resources.**
+
+**Azure Arc → Extend Azure management to on-premises and other clouds.**
