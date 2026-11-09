@@ -111,3 +111,43 @@ Monitor network routes and traffic to understand how resources communicate.
 ### Main Takeaway
 
 Azure Virtual Networks provide the foundation for **private communication, network connectivity, routing, and security** in Azure.
+
+## Azure DNS
+
+**Azure DNS** is a service that hosts and manages DNS records using Microsoft's Azure infrastructure.
+
+Imagine your company owns a website called `mycompany.com`.
+
+When someone types that website name, DNS helps their browser find the correct IP address so it can connect to the website.
+
+**Azure DNS manages the records that make this possible.**
+
+### Important Features
+
+**1. Fast and Reliable:** Azure uses DNS servers around the world to answer DNS queries efficiently.
+
+**2. Public and Private DNS:**
+- **Public DNS:** Helps users find publicly accessible services.
+- **Private DNS:** Helps resources inside Azure VNets find each other using private domain names.
+
+**3. Security and Management:** Supports Azure RBAC, activity logs, and resource locks to control access and protect DNS resources.
+
+**4. Alias Records:** Can point a DNS name to supported Azure resources, such as public IP addresses or Traffic Manager profiles, and follow resource changes automatically.
+
+**5. Easy Management:** You can manage DNS records through the Azure Portal, PowerShell, Azure CLI, and APIs.
+
+### Important Difference
+
+**Domain Registrar →** Where you purchase a domain name.
+
+**Azure DNS →** Where you host and manage its DNS records.
+
+Azure DNS does not sell domain names.
+
+### ⭐ AZ-900 Key Concept
+
+**DNS → Finds the IP address associated with a domain name.**
+
+**Azure DNS → Hosts and manages DNS records in Azure.**
+
+**Azure Private DNS → Provides private name resolution within connected Azure VNets.**
