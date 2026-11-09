@@ -120,3 +120,43 @@ Remember:
 **Azure Advisor → Get recommendations to improve Azure resources.**
 
 **Azure Arc → Extend Azure management to on-premises and other clouds.**
+
+## 8. Creating a Virtual Machine Using Azure PowerShell
+
+Azure PowerShell allows you to create and manage Azure resources by running commands instead of using the Azure Portal's graphical interface.
+
+### Example: Create an Ubuntu Virtual Machine
+
+Open **Azure Cloud Shell**, select **PowerShell**, and run:
+
+```powershell
+New-AzVM `
+    -ResourceGroupName "myresourcegroup" `
+    -Name "MyVM-01" `
+    -Image "Ubuntu2204"
+```
+
+### Understanding the Command
+
+| Parameter | Purpose |
+|---|---|
+| `New-AzVM` | Creates a new Azure Virtual Machine |
+| `-ResourceGroupName` | Specifies which resource group will contain the VM |
+| `-Name` | Specifies the VM's name |
+| `-Image` | Specifies the operating system image |
+
+In this example, we're creating a VM named `MyVM-01` running Ubuntu Linux.
+
+If you don't specify networking information, `New-AzVM` can automatically create supporting resources such as a virtual network, subnet, network interface, and public IP address.
+
+The command may also prompt you to provide VM login credentials.
+
+### ⭐ AZ-900 Exam Tip
+
+**Azure PowerShell → Manage Azure resources using PowerShell commands.**
+
+**Azure Cloud Shell → Run PowerShell or Azure CLI directly in a browser.**
+
+**`New-AzVM` → Creates an Azure Virtual Machine.**
+
+You don't need to memorize the entire command for AZ-900. Focus on understanding what each management tool does.
