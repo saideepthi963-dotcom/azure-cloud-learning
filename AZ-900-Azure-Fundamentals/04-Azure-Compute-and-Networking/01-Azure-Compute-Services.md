@@ -104,3 +104,54 @@ Serverless doesn't mean there are no servers. It means Azure manages them for yo
 **Need to host a website?** → App Service
 
 **Need to run code when something happens?** → Azure Functions
+
+
+## 7. Serverless Computing
+
+**Serverless Computing** means running applications without managing the underlying servers.
+
+Servers still exist, but **Azure handles their maintenance, scaling, and infrastructure**. You focus on writing and deploying your code.
+
+### How Does Serverless Work?
+
+Imagine you want to automatically process a file whenever someone uploads it.
+
+1. You write the code to process the file.
+2. You deploy it to Azure.
+3. When a file is uploaded, Azure runs your code.
+4. Azure scales the resources based on demand.
+
+This is called **event-driven computing** because an event triggers the application.
+
+### Azure Serverless Services
+
+| Service | What It Does |
+|---|---|
+| **Azure Functions** | Runs code when an event occurs. |
+| **Azure Logic Apps** | Automates workflows with little or no code. |
+| **Azure Event Grid** | Routes events between Azure services and applications. |
+| **Azure Container Apps** | Runs containerized applications without managing Kubernetes infrastructure. |
+
+### Why Use Serverless?
+
+Serverless reduces infrastructure management and automatically scales based on demand.
+
+It is useful for processing file uploads, scheduling tasks, automating workflows, and handling incoming events.
+
+**Cost:** Some serverless plans charge based on actual executions and resource consumption rather than continuously running servers. Pricing depends on the service and plan.
+
+### ⭐ AZ-900 Exam Tips
+
+**Serverless →** Azure manages the infrastructure.
+
+**Event-driven →** Code runs when a particular event occurs.
+
+**Azure Functions →** Execute code.
+
+**Azure Logic Apps →** Automate workflows.
+
+**Azure Event Grid →** Route events.
+
+**Azure Container Apps →** Run containers without managing Kubernetes.
+
+**Remember:** Serverless doesn't mean there are no servers. It means you don't manage them.
