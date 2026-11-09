@@ -151,3 +151,37 @@ Azure DNS does not sell domain names.
 **Azure DNS → Hosts and manages DNS records in Azure.**
 
 **Azure Private DNS → Provides private name resolution within connected Azure VNets.**
+
+## Azure Private Link and Private Endpoints
+
+**Azure Private Link** allows you to access supported Azure services privately, without sending traffic over the public internet.
+
+A **Private Endpoint** is a network interface with a private IP address inside your Azure VNet. It provides the private connection to a specific service using Azure Private Link.
+
+### Simple Example
+
+Imagine your Azure VM needs to communicate with Azure SQL Database.
+
+Instead of connecting through the database's public endpoint, you create a private endpoint in your VNet.
+
+Your VM can then access the database privately through Microsoft's Azure network.
+
+### Why Use Private Link?
+
+**Privacy:** Communication uses private connectivity instead of the public internet.
+
+**Security:** Access can be limited to specific Azure service resources, helping prevent unintended data access.
+
+**Hybrid Connectivity:** Supported services can also be accessed privately from on-premises networks through VPN or ExpressRoute.
+
+**Flexibility:** Works with supported Azure services, such as Azure Storage, SQL Database, and Cosmos DB, as well as supported customer-owned services.
+
+### ⭐ Remember
+
+**Azure Private Link →** Provides private connectivity to Azure services.
+
+**Private Endpoint →** A private IP address and network interface inside your VNet used to reach a specific service.
+
+**Microsoft Backbone →** Microsoft's private network infrastructure that carries the traffic.
+
+**Important:** A private endpoint does not automatically disable a service's public endpoint. Public access must be restricted separately when required.
