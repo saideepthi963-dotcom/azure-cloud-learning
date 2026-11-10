@@ -99,3 +99,65 @@ Features such as smart lockout and banned password lists help protect accounts a
 | **PIM** | Controls privileged administrator access |
 
 **Main takeaway:** Microsoft Entra ID helps organizations ensure that the right people can securely access the right resources.
+
+## Microsoft Entra Domain Services
+
+**Microsoft Entra Domain Services** provides traditional Windows domain services in Azure without requiring you to manage domain controllers.
+
+Imagine your company has an old application that relies on Windows Active Directory authentication.
+
+You want to move that application to Azure, but it doesn't support modern cloud sign-in methods.
+
+**Microsoft Entra Domain Services allows the application to continue using traditional authentication while Microsoft manages the domain infrastructure.**
+
+### What Does It Provide?
+
+**Domain Join:** Allows Windows computers and servers to join a managed domain.
+
+**Group Policy:** Centrally manages Windows computer and user settings.
+
+**LDAP:** Allows applications to look up users and directory information.
+
+**Kerberos and NTLM:** Traditional Windows authentication protocols.
+
+Microsoft manages the domain controllers, including maintenance, patching, and backups.
+
+### How Does It Work with Microsoft Entra ID?
+
+Microsoft Entra Domain Services synchronizes identities from Microsoft Entra ID into a managed domain.
+
+```text
+Microsoft Entra ID
+       │
+       │ One-way synchronization
+       ▼
+Microsoft Entra Domain Services
+       │
+       ▼
+Older Windows Applications
+```
+
+In hybrid environments, users can also originate from an on-premises Active Directory environment synchronized with Microsoft Entra ID.
+
+The managed domain provides traditional authentication without requiring organizations to deploy their own domain controllers.
+
+### Other Important Features
+
+**High Availability:** Microsoft deploys multiple managed domain controllers for reliability.
+
+**Managed Infrastructure:** Microsoft handles the underlying domain controller infrastructure.
+
+**One-Way Synchronization:** Identity information flows from Microsoft Entra ID into the managed domain, not back to Entra ID.
+
+**Legacy Application Support:** Helps migrate applications requiring LDAP, Kerberos, NTLM, or Group Policy.
+
+### Microsoft Entra ID vs. Entra Domain Services
+
+| Microsoft Entra ID | Microsoft Entra Domain Services |
+|---|---|
+| Modern cloud identity management | Traditional Windows domain services |
+| Supports cloud application authentication and SSO | Supports LDAP, Kerberos, and NTLM |
+| Used for Microsoft 365 and Azure access | Used for legacy applications and domain-joined VMs |
+| Cloud identity platform | Microsoft-managed domain infrastructure |
+
+**Main takeaway:** Microsoft Entra Domain Services helps older applications use traditional Windows authentication in Azure without requiring you to manage domain controllers.
