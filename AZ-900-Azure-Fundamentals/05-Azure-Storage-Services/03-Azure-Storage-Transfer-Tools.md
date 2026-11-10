@@ -72,3 +72,49 @@ This means the company doesn't need to keep every file fully stored on its local
 **Azure File Sync →** Synchronizes Windows Server file shares with Azure Files.
 
 **Cloud Tiering →** Keeps frequently used files locally and less-used files in Azure to save local storage space.
+
+## Azure Migrate
+
+**Azure Migrate** is a central hub that helps companies assess and move their existing servers, applications, databases, and infrastructure to Microsoft Azure.
+
+### Simple Example
+
+Imagine your company has 20 servers in its own datacenter and wants to move them to Azure.
+
+Instead of moving everything without planning, **Azure Migrate helps you identify what you have, check whether it's ready for Azure, and manage the migration process**.
+
+### Important Azure Migration Tools
+
+| Tool | What It Does |
+|---|---|
+| **Azure Migrate: Discovery and Assessment** | Discovers existing servers and checks their readiness for migration |
+| **Azure Migrate: Server Migration** | Moves physical and virtual servers to Azure |
+| **Data Migration Assistant (DMA)** | Checks SQL Server databases for potential migration issues |
+| **Azure Database Migration Service** | Helps migrate databases to Azure |
+| **Azure App Service Migration Assistant** | Assesses and helps migrate web applications to Azure App Service |
+| **Movere** | Assesses existing infrastructure and servers, as described in the lecture |
+| **Azure Data Box** | Transfers large amounts of data using a physical storage device |
+
+### What Is Azure Data Box?
+
+Imagine your company needs to move **50 TB of data** to Azure, but uploading everything through the internet would take too long.
+
+Microsoft ships a secure physical storage device to your company.
+
+You copy the data onto the device and send it back to Microsoft. Microsoft then transfers the data into Azure.
+
+**Azure Data Box → Physical device for transferring large amounts of data.**
+
+### Important Difference
+
+**AzCopy →** Copy files using commands.
+
+**Storage Explorer →** Manage storage through a graphical interface.
+
+**Azure File Sync →** Synchronize Windows Server file shares with Azure Files.
+
+**Azure Migrate →** Assess and migrate servers, applications, and databases to Azure.
+
+**Azure Data Box →** Physically transfer large amounts of data to Azure.
+
+**Main takeaway:** Azure Migrate helps organizations plan, assess, and carry out migrations from existing infrastructure to Azure.
