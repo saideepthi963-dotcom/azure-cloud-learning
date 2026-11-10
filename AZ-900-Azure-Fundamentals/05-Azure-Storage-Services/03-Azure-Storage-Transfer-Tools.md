@@ -43,3 +43,32 @@ For example, you can allow someone to download a particular file for a limited t
 | Uses commands and scripts | Uses menus and buttons |
 
 **Main takeaway:** AzCopy is useful for command-line file transfers, while Storage Explorer provides an easier visual way to manage Azure Storage data.
+
+## Azure File Sync
+
+**Azure File Sync** allows a company to synchronize files between its on-premises Windows Servers and Azure Files.
+
+### Simple Example
+
+Imagine your company has offices in Dallas and New York.
+
+Both offices need access to the same company files.
+
+With Azure File Sync, the company's files can be centralized in Azure Files while employees continue accessing them through their local Windows file servers.
+
+### What Is Cloud Tiering?
+
+**Cloud tiering** helps save space on local servers.
+
+- **Frequently used files:** Kept locally for quick access.
+- **Rarely used files:** Stored in Azure Files and downloaded when needed.
+
+This means the company doesn't need to keep every file fully stored on its local servers.
+
+### ⭐ Remember
+
+**Azure Files →** Cloud-based shared file storage.
+
+**Azure File Sync →** Synchronizes Windows Server file shares with Azure Files.
+
+**Cloud Tiering →** Keeps frequently used files locally and less-used files in Azure to save local storage space.
