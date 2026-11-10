@@ -141,3 +141,86 @@ Different blobs in the same container can use different access tiers.
 **Archive → I almost never use it, and I can wait to retrieve it.**
 
 **Main takeaway:** The less frequently you access data, the cheaper it can be to store, but the more expensive or slower it may be to retrieve.
+
+## Azure Storage Redundancy
+
+**Redundancy means Azure keeps extra copies of your data to protect it from failures.**
+
+The main difference between redundancy options is **where Azure keeps those copies**.
+
+### 1. LRS — Locally Redundant Storage
+
+Azure keeps **3 copies of your data in one datacenter** within a single region.
+
+This protects against hardware failures, such as a failed disk or server, but not an entire datacenter failure.
+
+**Remember:** LRS = One datacenter.
+
+### 2. ZRS — Zone-Redundant Storage
+
+Azure keeps **3 copies across different Availability Zones** within one Azure region.
+
+If one zone fails, your data can remain available from another zone.
+
+**Remember:** ZRS = Multiple zones, one region.
+
+### 3. GRS — Geo-Redundant Storage
+
+Azure keeps **3 copies in the primary region** and asynchronously replicates them to **3 additional copies in a secondary region**.
+
+This helps protect against a regional disaster.
+
+**Remember:** GRS = Two regions.
+
+### 4. RA-GRS — Read-Access Geo-Redundant Storage
+
+Works like GRS, but you can also **read data from the secondary region** without waiting for a failover.
+
+**Remember:** RA-GRS = GRS + Read access to backup region.
+
+### 5. GZRS — Geo-Zone-Redundant Storage
+
+Combines ZRS and GRS.
+
+Azure keeps copies across **3 Availability Zones in the primary region**, then replicates data to a secondary region.
+
+This protects against both zonal and regional failures.
+
+**Remember:** GZRS = Multiple zones + Another region.
+
+### 6. RA-GZRS — Read-Access Geo-Zone-Redundant Storage
+
+Works like GZRS, but allows **read access to the secondary region** without waiting for failover.
+
+**Remember:** RA-GZRS = GZRS + Read access to backup region.
+
+### Quick Comparison
+
+| Type | Where Data Is Replicated |
+|---|---|
+| **LRS** | One datacenter |
+| **ZRS** | Multiple zones in one region |
+| **GRS** | Two regions |
+| **RA-GRS** | Two regions + Secondary read access |
+| **GZRS** | Multiple zones + Secondary region |
+| **RA-GZRS** | Multiple zones + Secondary region + Read access |
+
+### Important Concepts
+
+**Synchronous replication:** Azure confirms a successful write after the required copies in the primary region are written.
+
+**Asynchronous replication:** Data is copied to another region after the primary write, so the secondary region may temporarily have older data.
+
+**RA (Read Access):** Allows reading from the secondary region. Writes still go to the primary region.
+
+### Easy Way to Remember
+
+**L = Local** → One datacenter.
+
+**Z = Zone** → Multiple Availability Zones.
+
+**G = Geo** → Multiple regions.
+
+**RA = Read Access** → Read from the secondary region.
+
+**Main takeaway:** Choose redundancy based on the failures you need protection against, not simply the option with the most copies.
