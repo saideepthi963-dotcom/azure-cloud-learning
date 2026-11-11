@@ -161,3 +161,78 @@ The managed domain provides traditional authentication without requiring organiz
 | Cloud identity platform | Microsoft-managed domain infrastructure |
 
 **Main takeaway:** Microsoft Entra Domain Services helps older applications use traditional Windows authentication in Azure without requiring you to manage domain controllers.
+
+## Microsoft Entra ID Authentication
+
+**Authentication means verifying that a person is who they claim to be.**
+
+Microsoft Entra ID provides several ways to make sign-ins more secure and convenient.
+
+### 1. Self-Service Password Reset (SSPR)
+
+Imagine an employee forgets their Microsoft 365 password.
+
+Instead of contacting IT support, they can verify their identity and reset the password themselves.
+
+**SSPR → Reset forgotten passwords without IT assistance.**
+
+Users can access the password reset portal at https://aka.ms/sspr.
+
+### 2. Multifactor Authentication (MFA)
+
+Imagine someone steals your password.
+
+Normally, they might be able to sign in using it. But with MFA, they must also pass another identity check.
+
+For example, you enter your password and approve a notification in Microsoft Authenticator.
+
+MFA uses different types of authentication factors:
+
+| Factor | Example |
+|---|---|
+| **Something you know** | Password or PIN |
+| **Something you have** | Phone or security key |
+| **Something you are** | Fingerprint or facial recognition |
+
+**MFA → Requires two or more different authentication factors to verify your identity.**
+
+### 3. Password Protection
+
+Microsoft Entra ID helps prevent users from choosing weak or easily guessed passwords.
+
+For example, it can block common passwords such as `password123` or passwords containing the company's name.
+
+It uses a global banned-password list and supports custom password restrictions.
+
+**Password Protection → Prevents weak or commonly used passwords.**
+
+### 4. Passwordless Authentication
+
+**Passwordless authentication allows users to sign in without entering a traditional password.**
+
+Imagine unlocking your Windows laptop using your fingerprint instead of typing a password.
+
+Microsoft Entra ID supports several passwordless methods:
+
+**Windows Hello for Business:** Uses fingerprint, facial recognition, or a device PIN.
+
+**FIDO2 Security Keys:** Physical security keys used for secure sign-in.
+
+**Microsoft Authenticator:** Supports passwordless sign-in using a mobile device.
+
+**Passwordless → Sign in securely without entering a traditional password.**
+
+---
+
+## Understanding the Differences
+
+| Feature | Main Purpose |
+|---|---|
+| **SSPR** | Reset your own forgotten password |
+| **MFA** | Add extra verification during sign-in |
+| **Password Protection** | Block weak passwords |
+| **Passwordless** | Sign in without a traditional password |
+
+### Main Takeaway
+
+Microsoft Entra ID improves authentication by making sign-ins more secure, reducing password-related risks, and allowing users to manage common authentication tasks themselves.
